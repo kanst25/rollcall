@@ -13,7 +13,11 @@
   <div class="form-group">
     <%= label_tag :course_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= number_field_tag :course_id, nil, class: 'form-control' %>
+       <select class="form-control" id="course_id" name="course_id">
+      <% Course.all.each do |course| %>
+      <option value="<%= course.id %>"><%= "#{course.department}-#{course.number} #{course.title}" %></option>
+      <% end %>
+      </select>
     </div>
   </div>
 
