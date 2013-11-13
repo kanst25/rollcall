@@ -1,6 +1,6 @@
 Rollcall::Application.routes.draw do
   # Routes for the Attendance resource:
-
+  # Github upload test
   root "posts#index"
   # CREATE
   get '/attendances/new', controller: 'attendances', action: 'new', as: 'new_attendance'
